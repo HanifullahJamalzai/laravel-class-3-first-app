@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function service()
     {
         // return 'service controller';
-        // $data = ['First Service', 'Second Service', 'Third Service'];
+        $data = ['First Service', 'Second Service', 'Third Service'];
 
         
         // return view('service', ['data' => $data]);
