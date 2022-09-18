@@ -1,14 +1,14 @@
 <h1>Service page</h1>
 
-{{-- @php --}}
+@php
     // var_dump($data);
     // dd($data);
 
-{{-- @endphp --}}
+ @endphp 
 <ul>
     @foreach ($data as $item)
         <li>
-            {{ $item }} <br>
+            {{ $item->name }} <br>
         </li>
     @endforeach
 </ul>

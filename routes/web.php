@@ -35,6 +35,9 @@ use App\Http\Controllers\HomeController;
 // });
 
 
+Route::get('/', function(){
+    return 'Root route';
+});
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/about', [DashboardController::class, 'about']);

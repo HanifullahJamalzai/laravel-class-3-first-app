@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Todo;
 
 class HomeController extends Controller
 {
@@ -15,7 +16,8 @@ class HomeController extends Controller
     public function service()
     {
         // return 'service controller';
-        $data = ['First Service', 'Second Service', 'Third Service'];
+        // $data = ['First Service', 'Second Service', 'Third Service'];
+        $data = Todo::all();
 
         
         // return view('service', ['data' => $data]);
