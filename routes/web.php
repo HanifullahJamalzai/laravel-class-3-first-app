@@ -35,6 +35,7 @@ use App\Http\Controllers\HomeController;
 // });
 
 
+
 Route::get('/', function(){
     return 'Root route';
 });
@@ -44,4 +45,5 @@ Route::get('/about', [DashboardController::class, 'about']);
 
 Route::get('/home', [HomeController::class, 'home']);
 Route::get('/service', [HomeController::class, 'service']);
+
 

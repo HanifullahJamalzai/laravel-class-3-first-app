@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Todo;
+use App\Models\Test;
 
 class HomeController extends Controller
 {
     public function home()
     {
         // return 'controller home controller ';
-        return view('home');
+        $data = Test::all();
+        return view('home', compact('data'));
     }
     
     public function service()
