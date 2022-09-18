@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TodoController;
+use App\Models\Todo;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +47,9 @@ Route::get('/about', [DashboardController::class, 'about']);
 
 Route::get('/home', [HomeController::class, 'home']);
 Route::get('/service', [HomeController::class, 'service']);
+
+Route::get('/todo', [TodoController::class, 'index']);
+Route::get('/todo/create', [TodoController::class, 'create']);
+Route::post('/todo/store', [TodoController::class, 'store']);
 
 
