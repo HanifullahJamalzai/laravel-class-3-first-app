@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     public function index(){
         // return 'Hello I am in controller';
-        return view('dashboard');asdfasdf
+        return view('dashboard');
     }
 
 

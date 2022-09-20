@@ -11,10 +11,18 @@
     @foreach ($data as $item)
         <div>
             <p>
-                <span style="margin-right: 1.2em;">{{ $item->name }}</span> 
-                <button style="background: red; border: none; padding: 0.6em 1em; cursor: pointer; color: white">Delete</button>
+                <span style="margin-right: 1.2em;">{{ $item->name }}</span>
+                
+                <form action="/todo/delete/{{ $item->id }}" method="post">
+                    @csrf
+                    @method('delete')
+
+                    <button type="submit" style="background: red; border: none; padding: 0.6em 1em; cursor: pointer; color: white">Delete</button>
+                </form>
+
                 <button style="background: green; border: none; padding: 0.6em 1em; cursor: pointer; color: white">Edit</button>
             </p>
+            <hr>
         </div>
     @endforeach
 </ul>

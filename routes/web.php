@@ -51,5 +51,6 @@ Route::get('/service', [HomeController::class, 'service']);
 Route::get('/todo', [TodoController::class, 'index']);
 Route::get('/todo/create', [TodoController::class, 'create']);
 Route::post('/todo/store', [TodoController::class, 'store']);
+Route::delete('/todo/delete/{id}', [TodoController::class, 'destroy']);
 
 
