@@ -37,4 +37,11 @@ class TodoController extends Controller
         return redirect('/todo');
     }
 
+    public function show($id)
+    {
+        $todo = Todo::find($id);
+        // dd($todo);
+        return view('todo.show', compact('todo'));
+    }
+
 }

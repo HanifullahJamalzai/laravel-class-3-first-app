@@ -11,7 +11,9 @@
     @foreach ($data as $item)
         <div>
             <p>
-                <span style="margin-right: 1.2em;">{{ $item->name }}</span>
+                <a href="/todo/{{ $item->id }}">
+                    <span style="margin-right: 1.2em;">{{ $item->name }}</span>
+                </a>
                 
                 <form action="/todo/delete/{{ $item->id }}" method="post">
                     @csrf
