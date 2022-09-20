@@ -22,7 +22,7 @@
                     <button type="submit" style="background: red; border: none; padding: 0.6em 1em; cursor: pointer; color: white">Delete</button>
                 </form>
 
-                <button style="background: green; border: none; padding: 0.6em 1em; cursor: pointer; color: white">Edit</button>
+                <a  href="/todo/edit/{{ $item->id }}" style="background: green; border: none; padding: 0.6em 1em; cursor: pointer; color: white; text-decoration: none;">Edit</a>
             </p>
             <hr>
         </div>
