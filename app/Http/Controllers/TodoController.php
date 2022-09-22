@@ -29,7 +29,9 @@ class TodoController extends Controller
         $data = request()->all();
         // dd($data);
         Todo::create(['name' => $data['name']]);
-
+        
+        session()->flash('success', 'You have successfully added a todo');
+        
         return redirect('/todo');
     }
 
@@ -57,6 +59,10 @@ class TodoController extends Controller
 
     public function update($id)
     {
+        request()->validate([
+            'name' => 'required|min:3|max:255',
+        ]);
+
         $todo = Todo::find($id);
         // dd($todo);
         // dd(request()->all());

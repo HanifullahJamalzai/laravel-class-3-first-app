@@ -6,6 +6,9 @@
 
 </h1>
 
+@if(session('success'))
+    <span style="color: green">{{ session('success') }}</span>
+@endif
 
 <ul style="display: flex; flex-direction:column; align-items:center; justify-content: center">
     @foreach ($data as $item)

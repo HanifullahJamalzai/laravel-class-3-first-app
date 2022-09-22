@@ -14,6 +14,10 @@
         placeholder="enter your todo here .."
         value="{{ $todo->name }}"
     >
+    @error('name')
+        <span style="color: red">{{ $message }}</span>
+    @enderror
+
     <button type="submit">Submit</button>
     
 </form>
