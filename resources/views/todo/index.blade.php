@@ -2,7 +2,7 @@
     <span>
         Todo Page
     </span>
-    <a href="/todo/create" style="background: purple; border: none; padding: 0.3em 0.7em; cursor: pointer; color: white">Add New Todo</a>
+    <a href="{{ route('todo.create') }}" style="background: purple; border: none; padding: 0.3em 0.7em; cursor: pointer; color: white">Add New Todo</a>
 
 </h1>
 
@@ -11,18 +11,18 @@
     @foreach ($data as $item)
         <div>
             <p>
-                <a href="/todo/{{ $item->id }}">
+                <a href="{{ route('todo.show', ['id' => $item->id]) }}">
                     <span style="margin-right: 1.2em;">{{ $item->name }}</span>
                 </a>
                 
-                <form action="/todo/delete/{{ $item->id }}" method="post">
+                <form action="{{ route('todo.delete', ['id' => $item->id]) }}" method="post">
                     @csrf
                     @method('delete')
 
                     <button type="submit" style="background: red; border: none; padding: 0.6em 1em; cursor: pointer; color: white">Delete</button>
                 </form>
 
-                <a  href="/todo/edit/{{ $item->id }}" style="background: green; border: none; padding: 0.6em 1em; cursor: pointer; color: white; text-decoration: none;">Edit</a>
+                <a  href="{{ route('todo.edit', ['id' => $item->id]) }}" style="background: green; border: none; padding: 0.6em 1em; cursor: pointer; color: white; text-decoration: none;">Edit</a>
             </p>
             <hr>
         </div>
