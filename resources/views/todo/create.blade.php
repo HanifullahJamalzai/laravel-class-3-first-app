@@ -14,7 +14,12 @@
         name="name" 
         style="margin-bottom: 1em; border: none; border-bottom: 2px solid green; text-indent: 4; font-size: 1em;" 
         placeholder="enter your todo here .."
+        value="{{ old('name') }}"
     >
+    @error('name')
+        <span style="color: red">{{ $message }}</span>
+    @enderror
+
     <button>Submit</button>
     
 </form>
