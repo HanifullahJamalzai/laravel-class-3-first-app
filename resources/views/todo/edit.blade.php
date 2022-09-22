@@ -2,8 +2,9 @@
 
 
 
-<form action="/todo/store" method="post" style="display: flex; flex-direction:column; align-items:center; justify-content: center">
+<form action="/todo/update/{{ $todo->id }}" method="post" style="display: flex; flex-direction:column; align-items:center; justify-content: center">
     @csrf
+    @method('put')
 
     <p>Todo input</p>
     <input 
@@ -13,6 +14,7 @@
         placeholder="enter your todo here .."
         value="{{ $todo->name }}"
     >
-    <button>Submit</button>
+    <button type="submit">Submit</button>
     
 </form>
+
